@@ -4,7 +4,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Livewire\Frontend\IndexComponent;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +15,7 @@ use App\Livewire\Frontend\IndexComponent;
 |
 */
 
-Route::get('/',IndexComponent::class)->name('home');
+Route::get('/',\App\Livewire\Frontend\IndexComponent::class)->name('home');
 Route::get('forbidden', function () {
     return view('error.forbidden');
 })->name('forbidden');
