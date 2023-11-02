@@ -299,7 +299,7 @@
                             <ul>
                                 <li><a class="active" href="index.html">Home </a></li>
                                 <li><a href="about.html">About</a></li>
-                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="{{ URL('/shop') }}">Shop</a></li>
                                 <li class="position-static"><a href="#">Our Collections <i class="fi-rs-angle-down"></i></a>
                                     <ul class="mega-menu">
                                         <li class="sub-mega-menu sub-mega-menu-width-22">
@@ -485,7 +485,7 @@
                 <nav>
                     <ul class="mobile-menu">
                         <li class="menu-item-has-children"><span class="menu-expand"></span><a href="index.html">Home</a></li>
-                        <li class="menu-item-has-children"><span class="menu-expand"></span><a href="shop.html">shop</a></li>
+                        <li class="menu-item-has-children"><span class="menu-expand"></span><a href="{{ URL('/shop') }}">shop</a></li>
                         <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Our Collections</a>
                             <ul class="dropdown">
                                 <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Women's Fashion</a>

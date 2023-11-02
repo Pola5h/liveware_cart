@@ -15,7 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',\App\Livewire\Frontend\IndexComponent::class)->name('home');
+Route::get('/', \App\Livewire\Frontend\IndexComponent::class)->name('home');
+Route::get('/shop', \App\Livewire\Frontend\ShopComponent::class)->name('shop');
+Route::get('/cart', \App\Livewire\Frontend\CartComponent::class)->name('cart');
+Route::get('/checkout', \App\Livewire\Frontend\CheckoutComponent::class)->name('checkout');
+
+
+
+
 Route::get('forbidden', function () {
     return view('error.forbidden');
 })->name('forbidden');
@@ -30,16 +37,12 @@ Route::get('/dashboard', function () {
 
 Route::group(['middleware' => ['auth', 'check_user:1'], 'as' => 'admin.'], function () {
     Route::resource('blank-page', \App\Http\Controllers\BasicController::class);
-    Route::resource('profile', \App\Http\Controllers\ProfileController::class);
-    Route::resource('setting', \App\Http\Controllers\SettingController::class);
     Route::resource('blog', \App\Http\Controllers\backend\BlogController::class);
     Route::post('blog_ckeditor', [\App\Http\Controllers\backend\BlogController::class, 'ckeditor'])->name('blog.ckeditor');
     Route::post('blog_remove_image', [\App\Http\Controllers\backend\BlogController::class, 'removeImage'])->name('blog.removeImage');
 });
 
 Route::group(['middleware' => ['auth', 'check_user:2'], 'prefix' => 'user', 'as' => 'user.'], function () {
-
-
 });
 
 

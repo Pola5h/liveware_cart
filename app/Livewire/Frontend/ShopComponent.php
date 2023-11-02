@@ -2,12 +2,18 @@
 
 namespace App\Livewire\Frontend;
 
+use App\Models\Product;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class ShopComponent extends Component
 {
+    use WithPagination;
     public function render()
     {
-        return view('livewire.frontend.shop-component');
+        $products = Product::paginate(12);
+        return view('livewire.frontend.shop-component',compact('products'));
     }
+    
+    
 }
