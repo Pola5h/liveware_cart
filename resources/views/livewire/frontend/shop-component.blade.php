@@ -103,7 +103,7 @@
                                         </div>
                                         <div class="product-action-1 show">
                                             <a aria-label="Add To Cart" class="action-btn hover-up"
-                                                href="shop-cart.php"><i class="fi-rs-shopping-bag-add"></i></a>
+                                                href="#" wire:click.prevent="CartStore({{$product->id}},'{{$product->name}}',{{$product->regular_price}})"><i class="fi-rs-shopping-bag-add"></i></a>
                                         </div>
                                     </div>
                                 </div>
