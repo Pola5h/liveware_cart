@@ -72,7 +72,8 @@
 
                                     <tr>
                                         <td colspan="6" class="text-end">
-                                            <a href="#"wire:click.prevent="clear()" class="text-muted"> <i class="fi-rs-cross-small"></i> Clear
+                                            <a href="#" wire:click.prevent="clear()" class="text-muted"> <i
+                                                    class="fi-rs-cross-small"></i> Clear
                                                 Cart</a>
                                         </td>
                                     </tr>

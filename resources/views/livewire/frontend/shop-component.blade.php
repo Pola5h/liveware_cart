@@ -102,20 +102,14 @@
                                             {{-- <span class="old-price">$245.8</span> --}}
                                         </div>
                                         <div class="product-action-1 show">
-                                            <a aria-label="Add To Cart" class="action-btn hover-up"
-                                                href="#" wire:click.prevent="CartStore({{$product->id}},'{{$product->name}}',{{$product->regular_price}})"><i class="fi-rs-shopping-bag-add"></i></a>
+                                            <a aria-label="Add To Cart" class="action-btn hover-up" href="#"
+                                                wire:click.prevent="CartStore({{$product->id}},'{{$product->name}}',{{$product->regular_price}})"><i
+                                                    class="fi-rs-shopping-bag-add"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             @endforeach
-
-
-
-
-
-
-
 
                         </div>
                         <!--pagination-->
@@ -126,9 +120,10 @@
                                     @if ($products->onFirstPage())
                                     <li class="page-item disabled"><span>«</span></li>
                                     @else
-                                    <li class="page-item"><a class="page-link" href="{{ $products->previousPageUrl() }}">«</a></li>
+                                    <li class="page-item"><a class="page-link"
+                                            href="{{ $products->previousPageUrl() }}">«</a></li>
                                     @endif
-                        
+
                                     @foreach ($products->getUrlRange(1, $products->lastPage()) as $page => $url)
                                     @if ($page == $products->currentPage())
                                     <li class="page-item active"><a class="page-link" href="#">{{ $page }}</a></li>
@@ -136,18 +131,20 @@
                                     <li class="page-item"><a class="page-link" href="{{ $url }}">{{ $page }}</a></li>
                                     @endif
                                     @endforeach
-                        
+
                                     @if ($products->hasMorePages())
-                                    <li class="page-item"><a class="page-link" href="{{ $products->nextPageUrl() }}"><i class="fi-rs-angle-double-small-right"></i></a></li>
+                                    <li class="page-item"><a class="page-link" href="{{ $products->nextPageUrl() }}"><i
+                                                class="fi-rs-angle-double-small-right"></i></a></li>
                                     @else
-                                    <li class="page-item disabled"><span><i class="fi-rs-angle-double-small-right"></i></span></li>
+                                    <li class="page-item disabled"><span><i
+                                                class="fi-rs-angle-double-small-right"></i></span></li>
                                     @endif
                                 </ul>
                             </nav>
                         </div>
-                        
-                        
-                        
+
+
+
                     </div>
                     <div class="col-lg-3 primary-sidebar sticky-sidebar">
                         <div class="row">

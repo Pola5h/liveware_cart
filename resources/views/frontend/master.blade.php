@@ -21,7 +21,7 @@
     @include('frontend.body.header')
 
 
-{{$slot}}
+    {{$slot}}
 
     @yield('frontend')
 
